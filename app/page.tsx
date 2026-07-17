@@ -1,65 +1,143 @@
-import Image from "next/image";
+/**
+ * Parshwa Auto — Homepage
+ * ─────────────────────────────────────────────────────
+ * Stack:    Next.js 15 · TypeScript · Tailwind CSS v4
+ *           Framer Motion · React Hook Form · Zod · Lucide React
+ *
+ * Install:  npm install framer-motion react-hook-form @hookform/resolvers zod lucide-react
+ *
+ * Font:     Add to app/layout.tsx →
+ *           import { Geist } from "next/font/google"
+ *           const geist = Geist({ subsets: ["latin"], variable: "--font-geist" })
+ *           <body className={geist.variable}>
+ * ─────────────────────────────────────────────────────
+ */
 
-export default function Home() {
+"use client";
+
+
+// ─────────────────────────────────────────────────────
+// SECTION: Navbar
+// ─────────────────────────────────────────────────────
+
+import Navbar from "@/components/home/Navbar"
+
+
+// ─────────────────────────────────────────────────────
+// SECTION: Hero
+// ─────────────────────────────────────────────────────
+
+import { Hero } from "@/components/home/Hero";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Trust Stats Strip
+// ─────────────────────────────────────────────────────
+
+import { TrustStrip } from "@/components/home/TrustStrip";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Sell Process — 4 Steps
+// ─────────────────────────────────────────────────────
+
+import { SellProcess } from "@/components/home/SellProcess";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Exchange Program
+// ─────────────────────────────────────────────────────
+
+import { ExchangeSection } from "@/components/home/ExcahngeSection";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Why Choose — Dark
+// ─────────────────────────────────────────────────────
+
+import { WhyChoose } from "@/components/home/WhyChoose";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Reviews — Firsty-style stacked cards
+// ─────────────────────────────────────────────────────
+
+import { ReviewsSection } from "@/components/home/ReviewsSection";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Bike Evaluation / What We Buy
+// ─────────────────────────────────────────────────────
+
+import { BikeEvalSection } from "@/components/home/BikeEvaluation";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Lead Form
+// ─────────────────────────────────────────────────────
+
+import { LeadForm } from "@/components/home/LeadForm";
+
+// ─────────────────────────────────────────────────────
+// SECTION: FAQ Accordion
+// ─────────────────────────────────────────────────────
+
+import { FAQSection } from "@/components/home/FAQ";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Contact / Visit Us
+// ─────────────────────────────────────────────────────
+
+import { ContactSection } from "@/components/home/Contact";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Footer CTA — Dark
+// ─────────────────────────────────────────────────────
+
+import { FooterCTA } from "@/components/home/FooterCTA";
+
+// ─────────────────────────────────────────────────────
+// SECTION: Footer
+// ─────────────────────────────────────────────────────
+
+import { Footer } from "@/components/home/Footer";
+
+// ─────────────────────────────────────────────────────
+// FLOATING: WhatsApp FAB
+// ─────────────────────────────────────────────────────
+
+import { WhatsAppFAB } from "@/components/home/WhatsAppFAB";
+
+// ─────────────────────────────────────────────────────
+// FLOATING: Mobile sticky bottom bar
+// ─────────────────────────────────────────────────────
+
+import { MobileStickyBar } from "@/components/home/MobileStickyBar";
+
+// ─────────────────────────────────────────────────────
+// JSON-LD Structured Data
+// ─────────────────────────────────────────────────────
+
+import { JsonLdSchema } from "@/components/seo/JsonLD";
+
+// ─────────────────────────────────────────────────────
+// PAGE — assembles all sections
+// ─────────────────────────────────────────────────────
+
+export default function ParshwaAutoHomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <JsonLdSchema />
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustStrip />
+        <SellProcess />
+        <ExchangeSection />
+        <WhyChoose />
+        <ReviewsSection />
+        <BikeEvalSection />
+        <LeadForm />
+        <FAQSection />
+        <ContactSection />
+        <FooterCTA />
       </main>
-    </div>
+      <Footer />
+      <WhatsAppFAB />
+      <MobileStickyBar />
+    </>
   );
 }
