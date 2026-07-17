@@ -9,7 +9,7 @@ export function MobileStickyBar() {
       aria-label="Mobile quick actions"
     >
       <a
-        href={`tel:${CONFIG.phone}`}
+        href={`tel:+${CONFIG.phone}`}
         className="flex items-center justify-center gap-2 py-4 text-[14px] font-semibold text-gray-900 border-r border-gray-100 active:bg-gray-50 transition-colors"
       >
         <Phone size={14} />
