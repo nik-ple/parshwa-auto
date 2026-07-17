@@ -1,5 +1,5 @@
 export const CONFIG = {
-  phone:       "+918390558079",
+  phone:       "91-8390558079",
   address:     "Parshwa Auto, PCMC Link Rd, Shop No.1, beside Gawade Petrol Pump, Gawade Nagar, Chinchwad, Pimpri-Chinchwad, Maharashtra 411033",
   hours:       "Mon – Sun, 10:30 AM – 8:00 PM",
   instagram:   "https://instagram.com/parshwa_auto",
