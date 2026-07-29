@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Parshwa Auto | Buy, Sell & Exchange Used Bikes in PCMC Pune",
-  description: "Buy, sell and exchange premium pre-owned motorcycles in PCMC, Pune. Instant payment, free RC transfer and trusted service from Parshwa Auto.",
+  description: "Buy, sell and exchange premium pre-owned bikes in PCMC, Pune. Instant payment, free RC transfer and trusted service from Parshwa Auto. Sell your bike in 15 minutes. Buy your next bike or exchange your exsisting bike for an upgrade.",
 };
 
 export default function RootLayout({
